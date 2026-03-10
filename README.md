@@ -4,7 +4,7 @@ A collection of **Data Structures and Algorithms** implemented in **C and C++** 
 
 ## Repository Structure
 
-
+```
 DSA
 ├── algorithms # Sorting, searching, recursion, etc.
 ├── data_structure # Implementations of arrays, vectors, linked lists, etc.
@@ -12,6 +12,7 @@ DSA
 
 
 ## Goals
+```
 
 - Implement and practice **common data structures** and **algorithms**  
 - Strengthen **problem-solving** and coding skills  
