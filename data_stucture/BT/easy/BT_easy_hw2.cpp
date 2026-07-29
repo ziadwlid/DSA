@@ -64,21 +64,41 @@ struct BinaryTree
     }
 };
 
-class solution {
-    public:
-        int maxDepth (TreeNode* root){
-            if (!root) return 0;
-            int depth {1};
-            if (root->left) {
-                maxDepth (root->left);
-                ++depth;
-            }
-            if (root->right){
-                maxDepth(root->right);
-                ++depth;
-            }
-            return depth;
+class solution
+{
+public:
+    int maxDepth(TreeNode *root)
+    {
+        if (!root)
+            return 0;
+        int depth{1};
+        if (root->left)
+        {
+            maxDepth(root->left);
+            ++depth;
         }
+        if (root->right)
+        {
+            maxDepth(root->right);
+            ++depth;
+        }
+        return depth;
+    }
+    int maxDepth_v2(TreeNode *root)
+    {
+        int depth = 1;
+        int left = 0, right = 0;
+
+        if (root->left)
+            left = maxDepth(root->left);
+
+        if (root->right)
+            right = maxDepth(root->right);
+
+        depth += max(left, right);
+
+        return depth;
+    }
 };
 
 bool isLeaf(TreeNode *node)
